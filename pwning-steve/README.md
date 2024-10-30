@@ -20,8 +20,7 @@ Change contents of `flag.txt` and rebuild the container.
 1. You can follow the detailed steps in ubuntu_setup.sh or run that script on your Ubuntu machine to build it automatically. Otherwise follow the general guidelines below.
 Clone the git repo git clone https://github.com/Motosploit/ctf_work.git then change your directory 
 cd ctf_work
-```
-```
+
 2. Create a directory for the server and change to it.
 ```
 mkdir -p ~/minecraft-server 
