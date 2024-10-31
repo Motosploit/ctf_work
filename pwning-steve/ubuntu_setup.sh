@@ -10,6 +10,10 @@ sudo systemctl start docker
 sudo systemctl enable docker
 #Setup a directory for the server
 mkdir -p ~/minecraft-server 
+#copy files from pwning-steve into the minecraft server folder
+cp flag.txt minecraft-server/
+cp Dockerfile minecraft-server/
+#change the directory
 cd ~/minecraft-server
 sudo docker build -t pwning-steve .
 sudo docker run -d -e EULA=TRUE -p 25565:25565 --name pwning-steve pwning-steve:latest""
