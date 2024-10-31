@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # HTML with flag message and hidden source comment
+    # HTML with flag message and hidden source comment, change the below to change the flags
     return """
-    <!-- Flag1337 -->
+    <!-- MiniCTF-{Recon-1s-t3h-F1rst-St3p-T0-3everyth1ng} -->
     <html>
         <body>
-            <h1>flag you found it!</h1>
+            <h1>MiniCTF-{Recon-1s-t3h-F1rst-St3p-T0-3everyth1ng}</h1>
         </body>
     </html>
     """

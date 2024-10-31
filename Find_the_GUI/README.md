@@ -1,22 +1,22 @@
 # Challenge
 
-**Category:** RCE
+**Category:** Recon
 
-**Difficulty:** Hard
+**Difficulty:** Easy
 
-**Title:** Pwning-Steve
+**Title:** Find The Gui
 
-**Description:** Everybody whats to be the operator in Minecraft, can you?
+**Description:** HOw good is your recon? Can you find it all?
 
 # Objective
-Exploit the log4j vulnerability on the minecraft server to get shell access and capture the flag.  
+Find the flag hidden in the gui. 
 
 # Flag
 ```
-MiniCTF-{Wh0-Ch0s3-J@ck-Bl@ck-2-Pl@y-St3v3?!}
+MiniCTF-{Recon-1s-t3h-F1rst-St3p-T0-3everyth1ng}
 ```
 # How to change the Flag
-Change contents of `flag.txt` and rebuild the container.
+Change contents of `app.py` and rebuild the container.
 
 # How to Build and Test the intended solution, standup a new ubuntu server(v24.04 works)
 
@@ -28,22 +28,26 @@ Then change your directory
 ```
 cd ctf-work
 ```
-2. Create a directory for the server and change to it.
+2. Create a directory for the server, copy the needed files then change to it.
 ```
-mkdir -p ~/minecraft-server 
+mkdir -p ~/gui-finder
 ```
 ```
-cd ~/minecraft-server
+cp app.py gui-finder
+```
+```
+cp Dockerfile gui-finder
+```
+```
+cd ~/gui-finder
 ```
 
 3. Build and start the image
 ```
-sudo docker build -t pwning-steve .
+sudo docker build -t gui-finder .
 ```
 ```
-sudo docker run -d -e EULA=TRUE -p 25565:25565 --name pwning-steve pwning-steve:latest
+sudo docker run -d -p 1337:1337 --name gui-finder gui-finder:latest
 ```
-4. Read the steps in exploit_poc.sh to see how the exploit works or solve it on your own, don't run exploit_poc.sh on it's own as it has pre-requirements for it to work.
+4. Find the flag
 
-# Notes
-Thanks to https://github.com/Justin-Garey/Minecraft-Log4j-Exploit?tab=readme-ov-file for the guidance on generating the PoC.
