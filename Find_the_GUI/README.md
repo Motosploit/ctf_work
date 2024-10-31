@@ -32,16 +32,10 @@ cd ctf-work
 ```
 mkdir -p ~/minecraft-server 
 ```
-Copy the files into the minecraft server folder
-```
-cp flag.txt minecraft-server/
-```
-```
-cp Dockerfile minecraft-server/
-```
 ```
 cd ~/minecraft-server
 ```
+
 3. Build and start the image
 ```
 sudo docker build -t pwning-steve .
