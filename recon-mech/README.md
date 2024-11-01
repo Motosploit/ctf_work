@@ -9,7 +9,7 @@
 **Description:** HOw good is your recon? Can you find it all?
 
 # Objective
-Find the flag hidden in the gui. 
+Find the flag guarded by the mech.
 
 # Flag
 ```
@@ -26,28 +26,14 @@ git clone https://github.com/Motosploit/ctf_work.git
 ```
 Then change your directory 
 ```
-cd ctf-work
+cd ctf-work/recon-mech
 ```
-2. Create a directory for the server, copy the needed files then change to it.
+2. Build and start the image
 ```
-mkdir -p ~/gui-finder
-```
-```
-cp app.py gui-finder
+sudo docker build -t recon-mech .
 ```
 ```
-cp Dockerfile gui-finder
+sudo docker run -d -p 1337:1337 --name recon-mech recon-mech:latest
 ```
-```
-cd ~/gui-finder
-```
-
-3. Build and start the image
-```
-sudo docker build -t gui-finder .
-```
-```
-sudo docker run -d -p 1337:1337 --name gui-finder gui-finder:latest
-```
-4. Find the flag
+3. Find the flag, if you want to know how to find the flag read the steps in exploit_poc.sh
 

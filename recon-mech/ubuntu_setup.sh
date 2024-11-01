@@ -9,10 +9,10 @@ sudo apt install -y docker.io
 sudo systemctl start docker 
 sudo systemctl enable docker
 #Setup a directory for the server
-mkdir -p ~/gui-finder
-cd ~/gui-finder
-sudo docker build -t gui-finder .
-sudo docker run -d -p 1337:1337 --name gui-finder gui-finder:latest
+mkdir -p ~/recon-mech
+cd ~/recon-mech
+sudo docker build -t recon-mech .
+sudo docker run -d -p 1337:1337 --name recon-mech recon-mech:latest
 #check it's running
 sudo docker ps
 
